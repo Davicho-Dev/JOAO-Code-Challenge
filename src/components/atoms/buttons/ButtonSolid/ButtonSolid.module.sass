@@ -1,0 +1,18 @@
+.button
+  @apply min-w-32 w-fit
+  @apply py-3 px-8
+  @apply font-semibold text-white text-center
+  @apply bg-primary
+  @apply rounded-full
+  @apply transition-all ease-in-out duration-500
+
+  &--loading
+    @extend .button
+    @apply grid justify-center items-center
+
+  &--disabled
+    @extend .button
+    @apply bg-disabled
+
+  &--error
+    @extend .button

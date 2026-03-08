@@ -1,0 +1,17 @@
+.button
+  box-shadow: 0 0 15px 0 rgba(6, 62, 64, 0.3)
+  @apply w-14 h-14
+  @apply grid justify-center items-center
+  @apply bg-primary
+  @apply rounded-full
+
+  &--loading
+    @extend .button
+    @apply animate-spin
+
+  &--disabled
+    @extend .button
+    @apply bg-disabled
+
+  &--error
+    @extend .button
