@@ -1,10 +1,17 @@
 import { createBrowserRouter } from 'react-router';
 
+import { CommonLayout } from '@layouts';
 import { HomePage } from '@pages';
 
 export const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <HomePage />,
+		element: <CommonLayout />,
+		children: [
+			{
+				index: true,
+				element: <HomePage />,
+			},
+		],
 	},
 ]);
