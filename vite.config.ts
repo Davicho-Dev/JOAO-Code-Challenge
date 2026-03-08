@@ -38,7 +38,7 @@ export default defineConfig({
 				__dirname,
 				'./src/components/organisms/index.ts',
 			),
-			'@layout': path.resolve(__dirname, './src/components/layout/index.ts'),
+			'@layouts': path.resolve(__dirname, './src/components/layouts/index.ts'),
 			'@templates': path.resolve(
 				__dirname,
 				'./src/components/templates/index.ts',

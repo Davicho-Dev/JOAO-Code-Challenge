@@ -28,7 +28,7 @@
 			"@atoms": ["components/atoms/index.ts"],
 			"@molecules": ["components/molecules/index.ts"],
 			"@organisms": ["components/organisms/index.ts"],
-			"@layout": ["components/layout/index.ts"],
+			"@layouts": ["components/layouts/index.ts"],
 			"@templates": ["components/templates/index.ts"],
 			"@hooks": ["hooks/index.ts"],
 			"@interfaces": ["interfaces/index.ts"],
