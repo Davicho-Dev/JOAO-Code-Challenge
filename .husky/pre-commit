@@ -1,0 +1,2 @@
+bunx eslint .
+bunx prettier . --write

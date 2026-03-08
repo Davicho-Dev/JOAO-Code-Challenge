@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+		"target": "ES2022",
+		"useDefineForClassFields": true,
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"types": ["vite/client"],
+		"skipLibCheck": true,
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"verbatimModuleSyntax": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+		"jsx": "react-jsx",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"erasableSyntaxOnly": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedSideEffectImports": true,
+		"baseUrl": "./src",
+		"paths": {
+			"@atoms": ["components/atoms/index.ts"],
+			"@molecules": ["components/molecules/index.ts"],
+			"@organisms": ["components/organisms/index.ts"],
+			"@layout": ["components/layout/index.ts"],
+			"@templates": ["components/templates/index.ts"],
+			"@hooks": ["hooks/index.ts"],
+			"@interfaces": ["interfaces/index.ts"],
+			"@pages": ["pages/index.ts"],
+			"@RTK/Store": ["store/index.ts"],
+			"@RTK/Middlewares": ["store/middlewares/index.ts"],
+			"@RTK/Slices": ["store/slices/index.ts"],
+			"@router": ["router/index.ts"],
+			"@services": ["services/index.ts"],
+			"@utils": ["utils/index.ts"]
+		}
+	},
+	"include": ["src"]
+}
