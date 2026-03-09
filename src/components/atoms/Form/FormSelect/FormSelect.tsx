@@ -1,6 +1,6 @@
 import type { IFormSelectProps } from './FormSelect.interfaces.ts';
 
-export const FormSelect = ({
+const FormSelect = ({
 	options,
 	label,
 	placeholder,
@@ -8,13 +8,13 @@ export const FormSelect = ({
 }: IFormSelectProps) => (
 	<fieldset className='flex flex-col gap-y-2'>
 		<label
-			className='font-medium text-xs text-neutral-100 uppercase'
+			className='font-medium leading-none text-xs text-neutral-100 uppercase'
 			htmlFor='restaurant'
 		>
 			{label}
 		</label>
 		<select
-			className='p-2 rounded-md'
+			className='h-10 p-2 rounded-md'
 			defaultValue=''
 			id='restaurant'
 			{...rest}
@@ -28,3 +28,14 @@ export const FormSelect = ({
 		</select>
 	</fieldset>
 );
+
+const FormSelectSkt = () => (
+	<div className='flex flex-col gap-y-2  animate-pulse'>
+		<div className='grow-0 shrink-0 w-24 h-3 bg-gray-300 rounded-md' />
+		<div className='grow-0 shrink-0 h-10 inline-flex items-center bg-gray-300 rounded-md'>
+			<div className='w-20 h-4 ml-3 rounded-md bg-gray-100' />
+		</div>
+	</div>
+);
+
+export { FormSelect, FormSelectSkt };
