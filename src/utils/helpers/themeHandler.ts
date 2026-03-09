@@ -1,12 +1,15 @@
 const getTheme = () => {
-	const htmlTheme = document.getElementsByTagName('html')[0].classList.value;
-	const storageTheme = localStorage.getItem('theme');
+	const theme = localStorage.getItem('theme') || 'light';
 
-	return { theme: `${storageTheme || htmlTheme}` };
+	const html = document.documentElement;
+	html.classList.remove('dark', 'light');
+	html.classList.add(theme);
+
+	return { theme };
 };
 
 const setTheme = ({ theme }: { theme: string }) => {
-	const html = document.getElementsByTagName('html')[0];
+	const html = document.documentElement;
 
 	html.classList.remove('dark', 'light');
 	html.classList.add(theme);
