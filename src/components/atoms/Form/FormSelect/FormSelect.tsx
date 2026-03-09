@@ -1,3 +1,5 @@
+import { useId } from 'react';
+
 import type { IFormSelectProps } from './FormSelect.interfaces.ts';
 
 const FormSelect = ({
@@ -5,35 +7,34 @@ const FormSelect = ({
 	label,
 	placeholder,
 	...rest
-}: IFormSelectProps) => (
-	<fieldset className='flex flex-col gap-y-2'>
-		<label
-			className='font-medium leading-none text-xs text-neutral-100 uppercase'
-			htmlFor='restaurant'
-		>
-			{label}
-		</label>
-		<select
-			className='h-10 p-2 rounded-md'
-			defaultValue=''
-			id='restaurant'
-			{...rest}
-		>
-			<option value=''>{placeholder}</option>
-			{options?.map(({ label, value }) => (
-				<option key={value} value={value}>
-					{label}
-				</option>
-			))}
-		</select>
-	</fieldset>
-);
+}: IFormSelectProps) => {
+	const innerId = useId();
+
+	return (
+		<fieldset className='flex flex-col gap-y-2'>
+			<label
+				className='text-xs font-medium uppercase leading-none text-neutral-100'
+				htmlFor={innerId}
+			>
+				{label}
+			</label>
+			<select className='h-10 rounded-md p-2' id={innerId} {...rest}>
+				<option value=''>{placeholder}</option>
+				{options?.map(({ label, value }) => (
+					<option key={value} value={value}>
+						{label}
+					</option>
+				))}
+			</select>
+		</fieldset>
+	);
+};
 
 const FormSelectSkt = () => (
-	<div className='flex flex-col gap-y-2  animate-pulse'>
-		<div className='grow-0 shrink-0 w-24 h-3 bg-gray-300 rounded-md' />
-		<div className='grow-0 shrink-0 h-10 inline-flex items-center bg-gray-300 rounded-md'>
-			<div className='w-20 h-4 ml-3 rounded-md bg-gray-100' />
+	<div className='flex animate-pulse flex-col gap-y-2'>
+		<div className='h-3 w-24 shrink-0 grow-0 rounded-md bg-gray-300' />
+		<div className='inline-flex h-10 shrink-0 grow-0 items-center rounded-md bg-gray-300'>
+			<div className='ml-3 h-4 w-20 rounded-md bg-gray-100' />
 		</div>
 	</div>
 );

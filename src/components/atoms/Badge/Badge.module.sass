@@ -1,0 +1,26 @@
+.badge
+  @apply inline-flex items-center gap-x-1.5
+  @apply px-3 py-1
+  @apply rounded-full
+  @apply text-xs font-semibold uppercase tracking-wide
+  @apply select-none
+
+  &--pending
+    @extend .badge
+    @apply bg-amber-100 text-amber-700
+    @apply dark:bg-amber-900/40 dark:text-amber-300
+
+  &--preparing
+    @extend .badge
+    @apply bg-blue-100 text-blue-700
+    @apply dark:bg-blue-900/40 dark:text-blue-300
+
+  &--served
+    @extend .badge
+    @apply bg-emerald-100 text-emerald-700
+    @apply dark:bg-emerald-900/40 dark:text-emerald-300
+
+  &--neutral
+    @extend .badge
+    @apply bg-neutral-100 text-neutral-600
+    @apply dark:bg-neutral-800 dark:text-neutral-400
