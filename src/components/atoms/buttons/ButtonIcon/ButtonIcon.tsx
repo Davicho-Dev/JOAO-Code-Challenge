@@ -25,6 +25,7 @@ export const ButtonIcon = ({
 				{...rest}
 			>
 				{children}
+				<Tooltip id={innerId} content={tooltipContent} />
 			</button>
 		);
 
@@ -36,6 +37,7 @@ export const ButtonIcon = ({
 				{...rest}
 			>
 				{children}
+				<Tooltip id={innerId} content={tooltipContent} />
 			</button>
 		);
 
@@ -48,6 +50,7 @@ export const ButtonIcon = ({
 				{...rest}
 			>
 				{children}
+				<Tooltip id={innerId} content={tooltipContent} />
 			</button>
 		);
 

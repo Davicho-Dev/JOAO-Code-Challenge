@@ -1,17 +1,19 @@
+
 .button
-  box-shadow: 0 0 15px 0 rgba(6, 62, 64, 0.3)
-  @apply w-14 h-14
-  @apply grid justify-center items-center
-  @apply bg-primary
-  @apply rounded-full
+	@apply w-14 h-14
+	@apply grid justify-center items-center
+	@apply bg-amber-600
+	@apply rounded-full
+	box-shadow: 0 0 15px 0 rgba(6, 62, 64, 0.3)
 
-  &--loading
-    @extend .button
-    @apply animate-spin
+	&--loading
+		@extend .button
+		@apply animate-spin
 
-  &--disabled
-    @extend .button
-    @apply bg-disabled
+	&--disabled
+		@extend .button
+		@apply bg-gray-500
 
-  &--error
-    @extend .button
+	&--error
+		@extend .button
+
