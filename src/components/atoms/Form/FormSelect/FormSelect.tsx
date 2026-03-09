@@ -18,7 +18,11 @@ const FormSelect = ({
 			>
 				{label}
 			</label>
-			<select className='h-10 rounded-md p-2' id={innerId} {...rest}>
+			<select
+				className='h-10 rounded-md p-2 dark:bg-neutral-800 dark:text-neutral-200'
+				id={innerId}
+				{...rest}
+			>
 				<option value='' disabled>
 					{placeholder}
 				</option>

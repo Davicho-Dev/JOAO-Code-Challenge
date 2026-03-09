@@ -19,7 +19,7 @@ const OrderCard = ({ order, isSelected, onSelect }: IOrderCardProps) => {
 
 	return (
 		<article
-			className={isSelected ? styles['card--selected'] : styles['card']}
+			className={`relative flex cursor-pointer flex-col gap-y-3 rounded-2xl border-2 border-transparent bg-white p-4 transition-all duration-200 dark:border-neutral-700/60 dark:bg-neutral-800 ${styles['card']} ${isSelected ? styles['card--selected'] : ''}`}
 			onClick={() => onSelect(orderID)}
 			role='button'
 			tabIndex={0}

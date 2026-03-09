@@ -53,12 +53,8 @@ export const OrdersPage = () => {
 			: orders.filter(o => o.status === activeFilter).length;
 
 	return (
-		<main className='flex h-full flex-col gap-6 overflow-hidden p-6 lg:flex-row'>
-			<div
-				className={`flex flex-col gap-y-4 overflow-y-auto transition-all duration-300 ${
-					selectedOrder ? 'lg:flex-1' : 'w-full'
-				}`}
-			>
+		<main className='flex h-full flex-col overflow-hidden p-6 lg:flex-row'>
+			<div className='flex min-w-0 flex-1 flex-col gap-y-4 overflow-y-auto'>
 				<header className='flex flex-shrink-0 items-baseline gap-x-3'>
 					<h1 className='text-2xl font-black text-neutral-800 dark:text-neutral-100'>
 						Orders
@@ -80,14 +76,22 @@ export const OrdersPage = () => {
 				/>
 			</div>
 
-			{selectedOrder && (
-				<div className='w-full flex-shrink-0 lg:h-full lg:w-80 xl:w-96'>
-					<OrderDetail
-						order={selectedOrder}
-						onClose={() => setSelectedOrderID(null)}
-					/>
+			<div
+				className={`flex-shrink-0 overflow-hidden transition-[max-width,padding-left] duration-300 ease-in-out lg:h-full ${
+					selectedOrder
+						? 'max-w-full lg:max-w-xs lg:pl-6 xl:max-w-md'
+						: 'max-w-0'
+				}`}
+			>
+				<div className='lg:h-full lg:w-80 xl:w-96'>
+					{selectedOrder && (
+						<OrderDetail
+							order={selectedOrder}
+							onClose={() => setSelectedOrderID(null)}
+						/>
+					)}
 				</div>
-			)}
+			</div>
 		</main>
 	);
 };

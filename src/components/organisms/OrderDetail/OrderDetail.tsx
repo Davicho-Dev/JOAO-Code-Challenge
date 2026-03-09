@@ -22,7 +22,9 @@ export const OrderDetail = ({ order, onClose }: IOrderDetailProps) => {
 		.toFixed(2);
 
 	return (
-		<aside className={styles['panel']}>
+		<aside
+			className={`flex h-full flex-col gap-y-5 rounded-2xl bg-white p-6 dark:bg-neutral-800 ${styles['panel']}`}
+		>
 			<header className='flex items-start justify-between gap-x-4'>
 				<div className='flex flex-col gap-y-1'>
 					<span className='font-mono text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500'>
