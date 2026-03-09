@@ -1,5 +1,12 @@
-import type { IButtonProps } from '@interfaces';
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-type IButtonOutlinedProps = IButtonProps;
+interface IButtonOutlinedProps extends DetailedHTMLProps<
+	ButtonHTMLAttributes<HTMLButtonElement>,
+	HTMLButtonElement
+> {
+	isLoading?: boolean;
+	hasError?: boolean;
+	tooltipContent?: string;
+}
 
 export type { IButtonOutlinedProps };

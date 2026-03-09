@@ -1,5 +1,12 @@
-import type { IButtonProps } from '@interfaces';
+import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-type IButtonSolidProps = IButtonProps;
+interface IButtonSolidProps extends DetailedHTMLProps<
+	ButtonHTMLAttributes<HTMLButtonElement>,
+	HTMLButtonElement
+> {
+	isLoading?: boolean;
+	hasError?: boolean;
+	tooltipContent?: string;
+}
 
 export type { IButtonSolidProps };
