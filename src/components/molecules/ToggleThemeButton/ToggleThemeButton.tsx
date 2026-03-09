@@ -15,11 +15,11 @@ export const ToggleThemeButton = () => {
 	};
 
 	return (
-		<ButtonIcon className='w-10 h-10' onClick={hdlTheme}>
+		<ButtonIcon className='h-10 w-10' onClick={hdlTheme}>
 			{theme === 'dark' ? (
 				<LuSunMedium className='text-xl' />
 			) : (
-				<LuMoon className='text-xl stroke-white' />
+				<LuMoon className='stroke-white text-xl' />
 			)}
 		</ButtonIcon>
 	);
