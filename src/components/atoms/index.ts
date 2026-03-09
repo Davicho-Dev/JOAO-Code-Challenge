@@ -1,4 +1,5 @@
 export * from './Badge/Badge';
+export type * from './Badge/Badge.interfaces';
 export * from './Buttons/ButtonIcon/ButtonIcon';
 export * from './Buttons/ButtonOutlined/ButtonOutlined';
 export * from './Buttons/ButtonSolid/ButtonSolid';
