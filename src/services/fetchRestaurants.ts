@@ -1,9 +1,8 @@
-import { apiPublic } from '@services';
-
 import type { IRestaurant } from '@interfaces';
 
-export const fetchRestaurants = async () => {
-	const { data } = await apiPublic.get<IRestaurant[]>('/restaurant');
+import restaurantsMock from './__mocks__/restaurants.json';
 
-	return data;
-};
+export const fetchRestaurants = (): Promise<IRestaurant[]> =>
+	new Promise(resolve =>
+		setTimeout(() => resolve(restaurantsMock as IRestaurant[]), 800),
+	);

@@ -1,13 +1,11 @@
-import { apiPublic } from '@services';
-
 import type { IMenu, IRestaurant } from '@interfaces';
 
-export const fetchMenuByRestaurantId = async ({
-	restaurantID,
-}: Pick<IRestaurant, 'restaurantID'>) => {
-	const { data } = await apiPublic.get<IMenu[]>(
-		`/restaurant/${restaurantID}/menu`,
-	);
+import menusMock from './__mocks__/menus.json';
 
-	return data;
+export const fetchMenuByRestaurantId = ({
+	restaurantID,
+}: Pick<IRestaurant, 'restaurantID'>): Promise<IMenu[]> => {
+	const items =
+		(menusMock as Record<string, IMenu[]>)[String(restaurantID)] ?? [];
+	return new Promise(resolve => setTimeout(() => resolve(items), 800));
 };

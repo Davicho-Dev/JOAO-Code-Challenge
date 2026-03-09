@@ -1,0 +1,30 @@
+[
+	{
+		"restaurantID": 26,
+		"restaurantName": "1135 AD",
+		"address": "Jaipur, Amber Fort, Rajasthan",
+		"type": "Rajasthani",
+		"parkingLot": true
+	},
+	{
+		"restaurantID": 25,
+		"restaurantName": "6 Ballygunge Place",
+		"address": "Kolkata, Ballygunge, West Bengal",
+		"type": "Bengali Cuisine",
+		"parkingLot": true
+	},
+	{
+		"restaurantID": 29,
+		"restaurantName": "Agashiye",
+		"address": "Ahmedabad, House of MG, Gujarat",
+		"type": "Gujarati",
+		"parkingLot": true
+	},
+	{
+		"restaurantID": 9,
+		"restaurantName": "Alhamdulillah Hotel",
+		"address": "Hyderabad, Sultan Shahi, Telangana",
+		"type": "Mughlai",
+		"parkingLot": false
+	}
+]

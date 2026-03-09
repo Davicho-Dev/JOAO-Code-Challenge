@@ -1,0 +1,118 @@
+{
+	"9": [
+		{
+			"itemID": 19,
+			"itemName": "Hyderabadi Biryani",
+			"itemDescription": "Aromatic rice and tender mutton cooked with traditional spices.",
+			"itemPrice": 360.0,
+			"restaurantName": "Alhamdulillah Hotel",
+			"restaurantID": 9,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/hyderabad%20biryani.jpg"
+		},
+		{
+			"itemID": 20,
+			"itemName": "Mutton Korma",
+			"itemDescription": "Slow-cooked mutton in a rich, spiced curry.",
+			"itemPrice": 430.0,
+			"restaurantName": "Alhamdulillah Hotel",
+			"restaurantID": 9,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/mutton-korma.jpg"
+		},
+		{
+			"itemID": 21,
+			"itemName": "Firni",
+			"itemDescription": "Sweet pudding made with milk and rice flour.",
+			"itemPrice": 120.0,
+			"restaurantName": "Alhamdulillah Hotel",
+			"restaurantID": 9,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/firni.jpg"
+		}
+	],
+	"25": [
+		{
+			"itemID": 67,
+			"itemName": "Bengali Thali",
+			"itemDescription": "A complete Bengali meal served with rice, dal, vegetables, and fish curry.",
+			"itemPrice": 500.0,
+			"restaurantName": "6 Ballygunge Place",
+			"restaurantID": 25,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/bengali%20thali.jpg"
+		},
+		{
+			"itemID": 68,
+			"itemName": "Kosha Mangsho",
+			"itemDescription": "Slow-cooked mutton curry with a rich, spicy gravy.",
+			"itemPrice": 450.0,
+			"restaurantName": "6 Ballygunge Place",
+			"restaurantID": 25,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/kosha%20mangsho.jpg"
+		},
+		{
+			"itemID": 69,
+			"itemName": "Sandesh",
+			"itemDescription": "Traditional Bengali sweet made with fresh paneer and flavored with cardamom.",
+			"itemPrice": 120.0,
+			"restaurantName": "6 Ballygunge Place",
+			"restaurantID": 25,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/sandesh.jpg"
+		}
+	],
+	"26": [
+		{
+			"itemID": 70,
+			"itemName": "Laal Maas",
+			"itemDescription": "Spicy Rajasthani mutton curry made with red chilies.",
+			"itemPrice": 500.0,
+			"restaurantName": "1135 AD",
+			"restaurantID": 26,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/laal-maas.jpeg"
+		},
+		{
+			"itemID": 71,
+			"itemName": "Dal Baati Churma",
+			"itemDescription": "Traditional Rajasthani dish with wheat dumplings, dal, and sweet churma.",
+			"itemPrice": 350.0,
+			"restaurantName": "1135 AD",
+			"restaurantID": 26,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/dal%20bati%20churma.jpg"
+		},
+		{
+			"itemID": 72,
+			"itemName": "Ghevar",
+			"itemDescription": "Sweet Rajasthani dessert made with flour, ghee, and sugar syrup.",
+			"itemPrice": 180.0,
+			"restaurantName": "1135 AD",
+			"restaurantID": 26,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/ghevar.jpg"
+		}
+	],
+	"29": [
+		{
+			"itemID": 79,
+			"itemName": "Chole Bhature",
+			"itemDescription": "Deep-fried bread served with spicy chickpea curry.",
+			"itemPrice": 250.0,
+			"restaurantName": "Agashiye",
+			"restaurantID": 29,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/chole%20batura.jpg"
+		},
+		{
+			"itemID": 80,
+			"itemName": "Samosa",
+			"itemDescription": "Fried pastry filled with spiced potatoes and peas.",
+			"itemPrice": 60.0,
+			"restaurantName": "Agashiye",
+			"restaurantID": 29,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/samosa.webp"
+		},
+		{
+			"itemID": 81,
+			"itemName": "Gulab Jamun",
+			"itemDescription": "Soft dough balls soaked in sweet syrup.",
+			"itemPrice": 120.0,
+			"restaurantName": "Agashiye",
+			"restaurantID": 29,
+			"imageUrl": "https://fakerestaurantapi.runasp.net/images/Gulab-Jamun.jpg"
+		}
+	]
+}
