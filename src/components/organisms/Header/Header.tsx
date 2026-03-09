@@ -1,38 +1,48 @@
+import type { ChangeEvent } from 'react';
+
 import { FormSelect, FormSelectSkt } from '@atoms';
 import { ToggleThemeButton } from '@molecules';
-import { useFetchRestaurants } from '@hooks';
+import { useAppDispatch, useAppSelector, useFetchRestaurants } from '@hooks';
+import { setSelectedRestaurantID } from '@RTK/Slices';
 
 import styles from './Header.module.sass';
 
 export const Header = () => {
 	const { data, isLoading } = useFetchRestaurants();
+	const dispatch = useAppDispatch();
+	const restaurantID = useAppSelector(({ ui }) => ui.restaurantID);
+
+	const hdlRestaurantChange = (e: ChangeEvent<HTMLSelectElement>) => {
+		const { value } = e.target;
+		dispatch(setSelectedRestaurantID(value ? Number(value) : null));
+	};
 
 	return (
 		<header
-			className={`w-full h-fit py-6 px-6 flex items-center bg-neutral-900 ${styles['header']}`}
+			className={`flex h-fit w-full items-center bg-neutral-900 px-6 py-6 ${styles['header']}`}
 		>
-			<form className='w-1/3'>
+			<form className='w-1/3' onSubmit={e => e.preventDefault()}>
 				{isLoading ? (
 					<FormSelectSkt />
 				) : (
 					<FormSelect
 						label='Restaurant'
-						placeholder='Selecciona un restaurant'
+						placeholder='Select a restaurant'
+						value={restaurantID?.toString() ?? ''}
+						onChange={hdlRestaurantChange}
 						options={
-							data
-								? data?.map(({ restaurantID, restaurantName }) => ({
-										value: restaurantID.toString(),
-										label: restaurantName,
-									}))
-								: []
+							data?.map(({ restaurantID: id, restaurantName }) => ({
+								value: id.toString(),
+								label: restaurantName,
+							})) ?? []
 						}
 					/>
 				)}
 			</form>
-			<figure className='w-1/3 grid place-items-center'>
+			<figure className='grid w-1/3 place-items-center'>
 				<img src='/logo.png' alt='JOAO Logo' />
 			</figure>
-			<div className='w-fit ml-auto'>
+			<div className='ml-auto w-fit'>
 				<ToggleThemeButton />
 			</div>
 		</header>
