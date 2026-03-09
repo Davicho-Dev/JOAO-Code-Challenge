@@ -1,15 +1,10 @@
-import type { Middleware } from '@reduxjs/toolkit';
+import type { Action, Dispatch, MiddlewareAPI } from '@reduxjs/toolkit';
 
 import { setRestaurantID, setTheme } from '@utils';
 
-import type { TRootState } from '@interfaces';
-
-export const uiMiddleware: Middleware<object, TRootState> =
-	store => next => action => {
+export const uiMiddleware =
+	(store: MiddlewareAPI) => (next: Dispatch) => (action: Action) => {
 		next(action);
-
-		if (typeof action !== 'object' || action === null || !('type' in action))
-			return;
 
 		const { ui } = store.getState();
 
