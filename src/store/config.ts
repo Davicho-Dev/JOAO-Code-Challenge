@@ -1,6 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { uiSlice } from '@RTK/Slices';

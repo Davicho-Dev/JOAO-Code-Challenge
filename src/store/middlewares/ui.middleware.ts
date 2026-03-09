@@ -1,18 +1,23 @@
-import type { Action, Dispatch, MiddlewareAPI } from '@reduxjs/toolkit';
+import type { Middleware } from '@reduxjs/toolkit';
 
-import { setTheme } from '@utils';
+import { setRestaurantID, setTheme } from '@utils';
 
 import type { TRootState } from '@interfaces';
 
-export const uiMiddleware =
-	(store: MiddlewareAPI) => (next: Dispatch) => (action: Action) => {
+export const uiMiddleware: Middleware<object, TRootState> =
+	store => next => action => {
 		next(action);
 
+		if (typeof action !== 'object' || action === null || !('type' in action))
+			return;
+
+		const { ui } = store.getState();
+
 		if (action.type === 'ui/toggleThemeMode') {
-			const { ui } = store.getState() as TRootState;
+			setTheme({ theme: ui.theme });
+		}
 
-			const { theme } = ui;
-
-			setTheme({ theme });
+		if (action.type === 'ui/setSelectedRestaurantID') {
+			setRestaurantID(ui.restaurantID);
 		}
 	};

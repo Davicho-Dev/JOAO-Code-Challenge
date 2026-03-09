@@ -1,4 +1,4 @@
-import { apiPublic } from './config/api';
+import { apiPublic } from '@services';
 
 import type { IMenu, IRestaurant } from '@interfaces';
 
