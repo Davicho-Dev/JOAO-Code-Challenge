@@ -10,7 +10,7 @@ import { router } from '@router';
 import { queryClient } from '@services';
 import { store } from '@RTK/Store';
 
-import './styles/globals.css';
+import './styles/globals.sass';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>

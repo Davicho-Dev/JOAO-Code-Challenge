@@ -23,7 +23,6 @@
 		"prettier",
 		"jest",
 		"cypress",
-		"react-query",
 		"react-router"
 	],
 	"scripts": {
