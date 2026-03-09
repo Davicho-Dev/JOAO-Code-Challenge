@@ -2,13 +2,17 @@ import { useQuery } from '@tanstack/react-query';
 
 import { fetchMenuByRestaurantId } from '@services';
 
-import type { IRestaurant } from '@interfaces';
+import type { UseQueryOptions } from '@tanstack/react-query';
+import type { IMenu, IRestaurant } from '@interfaces';
 
-export const useFetchMenuByRestaurantId = ({
-	restaurantID,
-}: Pick<IRestaurant, 'restaurantID'>) => {
-	return useQuery({
-		queryFn: async () => await fetchMenuByRestaurantId({ restaurantID }),
+type TOptions = Pick<UseQueryOptions<IMenu[]>, 'enabled'>;
+
+export const useFetchMenuByRestaurantId = (
+	{ restaurantID }: Pick<IRestaurant, 'restaurantID'>,
+	options?: TOptions,
+) =>
+	useQuery({
+		queryFn: () => fetchMenuByRestaurantId({ restaurantID }),
 		queryKey: ['menu', restaurantID],
+		...options,
 	});
-};
