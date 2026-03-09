@@ -31,10 +31,12 @@ export const Header = () => {
 						value={restaurantID?.toString() ?? ''}
 						onChange={hdlRestaurantChange}
 						options={
-							data?.map(({ restaurantID: id, restaurantName }) => ({
-								value: id.toString(),
-								label: restaurantName,
-							})) ?? []
+							data
+								? data?.map(({ restaurantID: id, restaurantName }) => ({
+										value: id.toString(),
+										label: restaurantName,
+									}))
+								: []
 						}
 					/>
 				)}
