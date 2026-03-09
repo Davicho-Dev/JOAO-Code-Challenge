@@ -19,7 +19,9 @@ const FormSelect = ({
 				{label}
 			</label>
 			<select className='h-10 rounded-md p-2' id={innerId} {...rest}>
-				<option value=''>{placeholder}</option>
+				<option value='' disabled>
+					{placeholder}
+				</option>
 				{options?.map(({ label, value }) => (
 					<option key={value} value={value}>
 						{label}
