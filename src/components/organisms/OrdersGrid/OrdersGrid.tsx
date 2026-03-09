@@ -1,3 +1,4 @@
+import { ButtonOutlined } from '@atoms';
 import { OrderCard, OrderCardSkt } from '@molecules';
 import { EmptyTemplate } from '@templates';
 
@@ -40,7 +41,7 @@ export const OrdersGrid = ({
 				aria-label='Filter orders'
 			>
 				{FILTERS.map(({ value, label }) => (
-					<button
+					<ButtonOutlined
 						key={value}
 						disabled={isLoading}
 						className={
@@ -54,7 +55,7 @@ export const OrdersGrid = ({
 						<span className='ml-1.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-white/30 text-xs font-bold'>
 							{isLoading ? '·' : countFor(value)}
 						</span>
-					</button>
+					</ButtonOutlined>
 				))}
 			</nav>
 
